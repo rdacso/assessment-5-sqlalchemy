@@ -60,7 +60,6 @@ def get_model_info(year):
     print db.session.query(Model.name, Model.brand_name, Brand.headquarters).join(Brand).filter(Model.year == year).all()
 
 
-get_model_info(1909)
 
 def get_brands_summary():
     '''Prints out each brand name, and each model name for that brand
